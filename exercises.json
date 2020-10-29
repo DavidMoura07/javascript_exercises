@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Vowel Count",
+        "fileName": "vowelCount.js",
+        "difficulty": "easy",
+        "command": "node vowelCount.js",
+        "tests": [
+            {
+                "args": "word to test",
+                "out": 4
+            }
+        ]
+    },
+    {
+        "name": "DigPow",
+        "fileName": "digPow.js",
+        "difficulty": "medium",
+        "command": "node digPow.js",
+        "tests": [
+            {
+                "args": "46288 3",
+                "out": 51
+            }
+        ]
+    },
+    {
+        "name": "Desafio do Array",
+        "fileName": "desafioArray.js",
+        "difficulty": "hard",
+        "command": "node desafioArray.js",
+        "tests": [
+            {
+                "args": "[64,30,25,33] 2 2",
+                "out": 3
+            }
+        ]
+    }
+]
