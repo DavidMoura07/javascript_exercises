@@ -27,7 +27,6 @@
  * */ 
 
  function findLessDivisionsNeeded(arr, maxRepetition, divisor){
-
     let arrNumbers = [];
 
     arr.map(num => {
@@ -64,3 +63,35 @@
  }
 
  findLessDivisionsNeeded([64,30,25,33], 2, 2);
+
+ // keep this function call here 
+// console.log(findLessDivisionsNeeded(readline(0), readline(1), readline(2)));
+
+/**
+ * 
+ * @param {number} [position] - Optional, position of argument required, starts at zero
+ */
+function readline(position = -1){
+    if(position >= 0){
+        const param = process.argv[position+2];
+        return convertParam(param);
+    }
+    
+    return process.argv.slice(2).join("");
+    
+}
+
+/**
+ * 
+ * @param {string} param 
+ */
+function convertParam(param){
+    if(param[0] === '{'){
+        return JSON.parse(param);
+    }else if(param[0] === '['){
+        let arr = param.substring(1, param.length-2);
+        return arr.split(",").map(item => parseInt(item) || item);
+    }else {
+        return parseInt(param) || param;
+    }
+}
